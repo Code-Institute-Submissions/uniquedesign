@@ -26,9 +26,15 @@
 }
 
 .index-font {
+    font-family: 'Poppins';
     text-transform: uppercase;
     font-weight: bold;
-    color: #ca685e;
+    color: aliceblue;
+}
+
+.bracket-font {
+    font-family: 'Ubuntu';
+    color: aliceblue;
 }
 
 html {
@@ -40,7 +46,7 @@ html {
 }
 
 body {
-    background: url('/static/img/1111949.png') no-repeat center center fixed;
+    background: url('/media/blue_background.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     /* color: rgb(218, 115, 18); */
@@ -67,7 +73,7 @@ body {
 }
 
 .btn-brown {
-    background: #10294b;
+    background: #081319;
     color: #B0B9C4;
 }
 
@@ -95,7 +101,7 @@ body {
 }
 
 .text-brown {
-    color: #10294b !important;
+    color: #081319 !important;
 }
 
 .border-black {
@@ -104,7 +110,7 @@ body {
 
 .bg-brown {
     /* background: #1d314e !important; */
-    background: #10294b !important;
+    background: #081319 !important;
 }
 
 .overlay {

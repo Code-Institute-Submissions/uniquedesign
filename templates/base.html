@@ -14,7 +14,7 @@
         {% block css %}
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&family=Alata&family=Ubuntu&family=Poppins&display=swap">
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
         {% endblock %}
 
@@ -34,7 +34,7 @@
         <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="" class="nav-link main-logo-link">
+                <a href="{% url 'index' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-brown my-0">Unique Design</h2>
                 </a>
             </div>
@@ -106,6 +106,10 @@
             </div>            
         </div>
         </header>
+
+        {% if messages %}
+            <div class = "message-container"></div>
+        {% endif %}
 
         {% block page-header %}
         {% endblock %}
