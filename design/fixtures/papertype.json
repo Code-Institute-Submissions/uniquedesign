@@ -1,0 +1,20 @@
+[
+    {
+        "pk": 1,
+        "model": "design.papertype",
+        "fields": {
+            "name": "a4",
+            "friendly_name": "A4 - Standard",
+            "price": 0.00
+        }
+    },
+    {
+        "pk": 2,
+        "model": "design.papertype",
+        "fields": {
+            "name": "legal",
+            "friendly_name": "Legal - US Standard",
+            "price": 2.99
+        }
+    }
+]

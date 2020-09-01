@@ -1,0 +1,38 @@
+[
+    {
+        "pk": 1,
+        "model": "design.papermake",
+        "fields": {
+            "name": "image",
+            "friendly_name": "Image - Basic",
+            "price": 0.00
+        }
+    },
+    {
+        "pk": 2,
+        "model": "design.papermake",
+        "fields": {
+            "name": "xerox",
+            "friendly_name": "Xerox - Standard",
+            "price": 1.99
+        }
+    },
+    {
+        "pk": 3,
+        "model": "design.papermake",
+        "fields": {
+            "name": "hp",
+            "friendly_name": "HP - Premium",
+            "price": 2.99
+        }
+    },
+    {
+        "pk": 4,
+        "model": "design.papermake",
+        "fields": {
+            "name": "conqueror",
+            "friendly_name": "Conqueror",
+            "price": 5.99
+        }
+    }
+]

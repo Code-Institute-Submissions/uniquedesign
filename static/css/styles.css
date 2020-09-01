@@ -6,6 +6,11 @@
     color: #000;
 }
 
+.desc {
+    font-family: 'Ubuntu';
+    color: aliceblue;
+}
+
 .line {
     border: 1px solid #000;
 }
@@ -22,7 +27,13 @@
 .logo-font {
     text-transform: uppercase;
     font-weight: 800;
+    color: #06131b;
+}
+
+.delivery-font {
+    font-family: 'Ubuntu';
     color: aliceblue;
+    text-transform: uppercase;
 }
 
 .index-font {
@@ -35,6 +46,11 @@
 .bracket-font {
     font-family: 'Ubuntu';
     color: aliceblue;
+}
+
+.divider {
+    border: 2px solid #06131b;
+    margin: 0;
 }
 
 html {
@@ -72,9 +88,14 @@ body {
     min-width: 260px;
 }
 
-.btn-brown {
-    background: #081319;
-    color: #B0B9C4;
+.btn-blue {
+    background: #152b38;
+    color: aliceblue;
+}
+
+.btn-blue:hover {
+    background: aliceblue;
+    color: #152b38;
 }
 
 .btn-outline-black {
@@ -100,17 +121,27 @@ body {
     color: #B0B9C4;
 }
 
-.text-brown {
-    color: #081319 !important;
+.text-black {
+    font-family: 'Ubuntu';
+    color: #000 !important;
+}
+
+.text-blue {
+    font-family: 'Ubuntu';
+    color: #152b38 !important;
+}
+
+.text-blue:hover {
+    color: #297aa8 !important;
 }
 
 .border-black {
     border: 1px solid black !important;
 }
 
-.bg-brown {
+.bg-blue {
     /* background: #1d314e !important; */
-    background: #081319 !important;
+    background: #152b38 !important;
 }
 
 .overlay {
@@ -119,7 +150,7 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: #B0B9C4;
+	background: #fff;
 	z-index: -1;
 }
 

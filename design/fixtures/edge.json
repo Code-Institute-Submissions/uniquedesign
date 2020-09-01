@@ -1,0 +1,20 @@
+[
+	{
+		"pk": 1,
+		"model": "design.edge",
+		"fields": {
+			"name": "square",
+			"friendly_name": "Square",
+			"price": 0.00
+		}
+    },
+    {
+    	"pk": 2,
+		"model": "design.edge",
+		"fields": {
+			"name": "rounded",
+			"friendly_name": "Rounded",
+			"price": 3.99
+		}
+    }
+]

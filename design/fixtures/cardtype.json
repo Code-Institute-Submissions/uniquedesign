@@ -1,0 +1,1 @@
+[{"pk": 1,"model": "design.cardtype","fields": {"name": "plain","friendly_name": "Plain","price": 0.00}},{"pk": 2,"model": "design.cardtype","fields": {"name": "textured","friendly_name": "Textured","price": 1.99}},{"pk": 3,"model": "design.cardtype","fields": {"name": "uv","friendly_name": "UV Paper","price": 3.99}}]

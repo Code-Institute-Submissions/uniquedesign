@@ -1,0 +1,42 @@
+[
+	{
+		"pk": 1,
+        "model": "design.header",
+        "fields": {
+            "name": "ltm",
+            "friendly_name": "Logo & Text in the Middle"
+        }
+    },
+    {
+		"pk": 2,
+        "model": "design.header",
+        "fields": {
+            "name": "ltr",
+            "friendly_name": "Logo & Text on the Right"
+        }
+    },
+    {
+		"pk": 3,
+        "model": "design.header",
+        "fields": {
+            "name": "ltl",
+            "friendly_name": "Logo & Text on the Left"
+        }
+    },
+    {
+		"pk": 4,
+        "model": "design.header",
+        "fields": {
+            "name": "lltr",
+            "friendly_name": "Logo on the Left & Text on the Right"
+        }
+    },
+    {
+		"pk": 5,
+        "model": "design.header",
+        "fields": {
+            "name": "lrtl",
+            "friendly_name": "Logo on the Right & Text on the Left"
+        }
+    }
+]
