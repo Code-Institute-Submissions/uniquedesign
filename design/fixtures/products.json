@@ -9,13 +9,14 @@
 			"address": "214 Halley Road E12 6UD",
 			"tel": "12345870",
 			"email": "a@def.com",
-			"logo": "a.jpg",
+			"logo": "/media/a.jpg",
 			"category": 1,
             "price": 120,
             "quantity": 1,
 			"edge": 1,
 			"cardtype": 3,
-			"thicknes": 1
+			"thicknes": 1,
+            "image_url": "/media/a.jpg"
 		}
 	},
 	{
@@ -28,7 +29,7 @@
 			"address": "34 Cecil Road E13 0LR",
 			"tel": "12785870",
 			"email": "b@def.com",
-			"logo": "b.jpg",
+			"logo": "/media/b.jpg",
 			"category": 2,
             "price": 150,
             "quantity": 5,
@@ -37,7 +38,8 @@
 			"make": 2,
 			"footer": "True",
 			"header": 2,
-            "info": "Registered as Sole Trader in the England and Welsh"
+            "info": "Registered as Sole Trader in the England and Welsh",
+            "image_url": "/media/b.jpg"
 		}
 	},
     {
@@ -50,13 +52,14 @@
 			"address": "CCCCCCCCCCC",
 			"tel": "3456",
 			"email": "c@def.com",
-			"logo": "c.jpg",
+			"logo": "/media/c.jpg",
 			"category": 1,
             "price": 180,
             "quantity": 2,
 			"edge": 2,
 			"cardtype": 2,
-			"thicknes": 1
+			"thicknes": 1,
+            "image_url": "/media/c.jpg"
 		}
 	},
 	{
@@ -69,7 +72,7 @@
 			"address": "DDDDDDDDDDDDDDDDDDD",
 			"tel": "4567",
 			"email": "d@def.com",
-			"logo": "d.jpg",
+			"logo": "/media/d.jpg",
 			"category": 2,
             "price": 250,
             "quantity": 6,
@@ -78,7 +81,8 @@
 			"make": 3,
 			"footer": "False",
 			"header": 3,
-            "info": "We are trading on Amazon under D Company"
+            "info": "We are trading on Amazon under D Company",
+            "image_url": "/media/d.jpg"
 		}
 	},{
 		"pk": 5,
@@ -90,13 +94,14 @@
 			"address": "EEEEEEEEEEEEEEEEEEEE",
 			"tel": "5678",
 			"email": "e@def.com",
-			"logo": "e.jpg",
+			"logo": "/media/e.jpg",
 			"category": 1,
             "price": 150,
             "quantity": 2,
 			"edge": 1,
 			"cardtype": 1,
-			"thicknes": 3
+			"thicknes": 3,
+            "image_url": "/media/e.jpg"
 		}
 	},
 	{
@@ -109,7 +114,7 @@
 			"address": "FFFFFFFFFFFFFFFFFFF",
 			"tel": "6789",
 			"email": "f@def.com",
-			"logo": "f.jpg",
+			"logo": "/media/f.jpg",
 			"category": 2,
             "price": 300,
             "quantity": 6,
@@ -118,7 +123,8 @@
 			"make": 4,
 			"footer": "False",
 			"header": 4,
-            "info": "Registered as Sole Trader in the England and Welsh"
+            "info": "Registered as Sole Trader in the England and Welsh",
+            "image_url": "/media/f.jpg"
 		}
 	},{
 		"pk": 7,
@@ -130,13 +136,14 @@
 			"address": "GGGGGGGGGGGGGGGGGG",
 			"tel": "7890",
 			"email": "g@def.com",
-			"logo": "g.jpg",
+			"logo": "/media/g.jpg",
 			"category": 1,
             "price": 180,
             "quantity": 3,
 			"edge": 2,
 			"cardtype": 2,
-			"thicknes": 4
+			"thicknes": 4,
+            "image_url": "/media/g.jpg"
 		}
 	},
 	{
@@ -149,7 +156,7 @@
 			"address": "HHHHHHHHHHHHHHHHHH",
 			"tel": "8901",
 			"email": "h@def.com",
-			"logo": "h.jpg",
+			"logo": "/media/h.jpg",
 			"category": 2,
             "price": 500,
             "quantity": 9,
@@ -158,7 +165,8 @@
 			"make": 1,
 			"footer": "True",
 			"header": 1,
-            "info": "Registered as Sole Trader in the England and Welsh"
+            "info": "Registered as Sole Trader in the England and Welsh",
+            "image_url": "/media/h.jpg"
 		}
 	},{
 		"pk": 9,
@@ -170,13 +178,14 @@
 			"address": "IIIIIIIIIIIIIIIIIIIII",
 			"tel": "9012",
 			"email": "i@def.com",
-			"logo": "i.jpg",
+			"logo": "/media/i.jpg",
 			"category": 1,
             "price": 100,
             "quantity": 4,
 			"edge": 1,
 			"cardtype": 1,
-			"thicknes": 1
+			"thicknes": 1,
+            "image_url": "/media/i.jpg"
 		}
 	},
 	{
@@ -189,7 +198,7 @@
 			"address": "JJJJJJJJJJJJJJJJJJJJJ",
 			"tel": "1010",
 			"email": "j@def.com",
-			"logo": "j.jpg",
+			"logo": "/media/j.jpg",
 			"category": 2,
             "price": 290,
             "quantity": 5,
@@ -198,7 +207,8 @@
 			"make": 3,
 			"footer": "True",
 			"header": 5,
-            "info": "Registered as Enterprise in the England and Welsh"
+            "info": "Registered as Enterprise in the England and Welsh",
+            "image_url": "/media/j.jpg"
 		}
 	},{
 		"pk": 11,
@@ -210,13 +220,14 @@
 			"address": "KKKKKKKKKKKKKKKKKKKKK",
 			"tel": "1111",
 			"email": "k@def.com",
-			"logo": "k.jpg",
+			"logo": "/media/k.jpg",
 			"category": 1,
             "price": 220,
             "quantity": 5,
 			"edge": 1,
 			"cardtype": 3,
-			"thicknes": 4
+			"thicknes": 4,
+            "image_url": "/media/k.jpg"
 		}
 	},
 	{
@@ -229,7 +240,7 @@
 			"address": "LLLLLLLLLLLLLLLLLLL",
 			"tel": "1212",
 			"email": "l@def.com",
-			"logo": "l.jpg",
+			"logo": "/media/l.jpg",
 			"category": 2,
             "price": 250,
             "quantity": 7,
@@ -238,7 +249,8 @@
 			"make": 2,
 			"footer": "False",
 			"header": 2,
-            "info": "Registered as Corporate in the England and Welsh"
+            "info": "Registered as Corporate in the England and Welsh",
+            "image_url": "/media/l.jpg"
 		}
 	},{
 		"pk": 13,
@@ -250,13 +262,14 @@
 			"address": "MMMMMMMMMMMMMMMMMMMMM",
 			"tel": "1313",
 			"email": "m@def.com",
-			"logo": "m.jpg",
+			"logo": "/media/m.jpg",
 			"category": 1,
             "price": 120,
             "quantity": 3,
 			"edge": 1,
 			"cardtype": 2,
-			"thicknes": 2
+			"thicknes": 2,
+            "image_url": "/media/m.jpg"
 		}
 	},
 	{
@@ -269,7 +282,7 @@
 			"address": "NNNNNNNNNNNNNNNNN",
 			"tel": "1414",
 			"email": "n@def.com",
-			"logo": "n.jpg",
+			"logo": "/media/n.jpg",
 			"category": 2,
             "price": 70,
             "quantity": 5,
@@ -278,7 +291,8 @@
 			"make": 1,
 			"footer": "False",
 			"header": 2,
-            "info": "Registered as Sole Trader in the England and Welsh"
+            "info": "Registered as Sole Trader in the England and Welsh",
+            "image_url": "http://www.logolalia.com/abcdefghijklmnopqrstuvwxyz/archives/002351.html"
 		}
 	},{
 		"pk": 15,
@@ -290,13 +304,14 @@
 			"address": "OOOOOOOOOOOOOOOOOOO",
 			"tel": "1515",
 			"email": "o@def.com",
-			"logo": "o.jpg",
+			"logo": "/media/o.jpg",
 			"category": 1,
             "price": 320,
             "quantity": 5,
 			"edge": 2,
 			"cardtype": 3,
-			"thicknes": 4
+			"thicknes": 4,
+            "image_url": "/media/o.jpg"
 		}
 	},
 	{
@@ -309,7 +324,7 @@
 			"address": "PPPPPPPPPPPPPPP",
 			"tel": "1616",
 			"email": "p@def.com",
-			"logo": "p.jpg",
+			"logo": "/media/p.jpg",
 			"category": 2,
             "price": 190,
             "quantity": 6,
@@ -318,7 +333,8 @@
 			"make": 3,
 			"footer": "True",
 			"header": 2,
-            "info": "Registered as Wholesaler in the England and Welsh"
+            "info": "Registered as Wholesaler in the England and Welsh",
+            "image_url": "/media/p.jpg"
 		}
 	},{
 		"pk": 17,
@@ -330,13 +346,14 @@
 			"address": "QQQQQQQQQQQQQQQQ",
 			"tel": "1717",
 			"email": "q@def.com",
-			"logo": "q.jpg",
+			"logo": "/media/q.jpg",
 			"category": 1,
             "price": 220,
             "quantity": 4,
 			"edge": 1,
 			"cardtype": 1,
-			"thicknes": 3
+			"thicknes": 3,
+            "image_url": "/media/q.jpg"
 		}
 	},
 	{
@@ -349,13 +366,14 @@
 			"address": "RRRRRRRRRRRRRRRRR",
 			"tel": "1818",
 			"email": "r@def.com",
-			"logo": "r.jpg",
+			"logo": "/media/r.jpg",
 			"category": 1,
             "price": 110,
             "quantity": 2,
 			"edge": 2,
 			"cardtype": 1,
-			"thicknes": 1
+			"thicknes": 1,
+            "image_url": "/media/r.jpg"
 		}
 	},{
 		"pk": 19,
@@ -367,13 +385,14 @@
 			"address": "SSSSSSSSSSSSSSS",
 			"tel": "1919",
 			"email": "s@def.com",
-			"logo": "s.jpg",
+			"logo": "/media/s.jpg",
 			"category": 1,
             "price": 180,
             "quantity": 3,
 			"edge": 1,
 			"cardtype": 1,
-			"thicknes": 3
+			"thicknes": 3,
+            "image_url": "/media/s.jpg"
 		}
 	},
 	{
@@ -386,13 +405,14 @@
 			"address": "TTTTTTTTTTTTTTTTT",
 			"tel": "2020",
 			"email": "t@def.com",
-			"logo": "t.jpg",
+			"logo": "/media/t.jpg",
 			"category": 1,
             "price": 210,
             "quantity": 3,
 			"edge": 1,
 			"cardtype": 2,
-			"thicknes": 2
+			"thicknes": 2,
+            "image_url": "/media/t.jpg"
 		}
 	},{
 		"pk": 21,
@@ -404,13 +424,14 @@
 			"address": "UUUUUUUUUUUUU",
 			"tel": "2121",
 			"email": "u@def.com",
-			"logo": "u.jpg",
+			"logo": "/media/u.jpg",
 			"category": 1,
             "price": 110,
             "quantity": 1,
 			"edge": 1,
 			"cardtype": 1,
-			"thicknes": 1
+			"thicknes": 1,
+            "image_url": "/media/u.jpg"
 		}
 	},
 	{
@@ -423,13 +444,14 @@
 			"address": "VVVVVVVVVVVVVVVVVV",
 			"tel": "2222",
 			"email": "v@def.com",
-			"logo": "v.jpg",
+			"logo": "/media/v.jpg",
 			"category": 1,
             "price": 180,
             "quantity": 3,
 			"edge": 1,
 			"cardtype": 1,
-			"thicknes": 4
+			"thicknes": 4,
+            "image_url": "/media/v.jpg"
 		}
 	},{
 		"pk": 23,
@@ -441,13 +463,14 @@
 			"address": "WWWWWWWWWWWWWWWWW",
 			"tel": "2323",
 			"email": "w@def.com",
-			"logo": "w.jpg",
+			"logo": "/media/w.jpg",
 			"category": 1,
             "price": 280,
             "quantity": 3,
 			"edge": 2,
 			"cardtype": 2,
-			"thicknes": 3
+			"thicknes": 3,
+            "image_url": "/media/w.jpg"
 		}
 	},
 	{
@@ -460,13 +483,14 @@
 			"address": "XXXXXXXXXXXXXXXXXX",
 			"tel": "2424",
 			"email": "x@def.com",
-			"logo": "x.jpg",
+			"logo": "/media/x.jpg",
 			"category": 1,
             "price": 150,
             "quantity": 2,
 			"edge": 1,
 			"cardtype": 1,
-			"thicknes": 1
+			"thicknes": 1,
+            "image_url": "/media/x.jpg"
 		}
 	},{
 		"pk": 25,
@@ -478,13 +502,14 @@
 			"address": "YYYYYYYYYYYYYYYY",
 			"tel": "2525",
 			"email": "y@def.com",
-			"logo": "y.jpg",
+			"logo": "/media/y.jpg",
 			"category": 1,
             "price": 310,
             "quantity": 5,
 			"edge": 2,
 			"cardtype": 3,
-			"thicknes": 4
+			"thicknes": 4,
+            "image_url": "/media/y.jpg"
 		}
 	},
 	{
@@ -497,13 +522,14 @@
 			"address": "ZZZZZZZZZZZZZZZ",
 			"tel": "2626",
 			"email": "z@def.com",
-			"logo": "z.jpg",
+			"logo": "/media/z.jpg",
 			"category": 1,
             "price": 110,
             "quantity": 1,
 			"edge": 1,
 			"cardtype": 1,
-			"thicknes": 4
+			"thicknes": 4,
+            "image_url": "/media/z.jpg"
 		}
 	}
 ]

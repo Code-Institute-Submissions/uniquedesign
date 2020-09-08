@@ -1,9 +1,41 @@
+.card-square {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    /* border-radius: .25rem; */
+}
+
+.card-rounded {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 3rem;
+}
+
 .selector-for-some-widget {
   box-sizing: content-box;
 }
 
 .header-text, a {
     color: #000;
+}
+
+.uv-link {
+    color: aliceblue;
 }
 
 .desc {
@@ -38,19 +70,43 @@
 
 .index-font {
     font-family: 'Poppins';
-    text-transform: uppercase;
     font-weight: bold;
+    font-size: 24px;
     color: aliceblue;
 }
 
 .bracket-font {
     font-family: 'Ubuntu';
+    font-size: 24px;
     color: aliceblue;
+}
+
+.heading-font {
+    font-family: 'Ubuntu';
+    font-size: 24px;
+    color: aliceblue;
+    padding-left: 15px;
 }
 
 .divider {
     border: 2px solid #06131b;
     margin: 0;
+}
+
+.head-divider {
+    border: 1px solid aliceblue;
+}
+
+.textured-background {
+    background: url('/media/textured.jpg');
+}
+
+.uv-background {
+    background-color: blue;
+}
+
+.uv-font {
+    color: aliceblue;
 }
 
 html {
@@ -66,7 +122,7 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     /* color: rgb(218, 115, 18); */
-    /* font-family: 'Lato'; */
+    font-family: 'Ubuntu';
 }
 
 /* from Bulma */
@@ -326,7 +382,7 @@ input[name='q']::placeholder {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 96px;
     }
 
     body {

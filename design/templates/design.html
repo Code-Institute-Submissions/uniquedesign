@@ -11,13 +11,119 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="my-auto w-100">
-                <h1 class="display-4 index-font text-center">
-                    Design
-                </h1>
+    <div class="overlay"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 class="logo-font">
+                        Products
+                    </h2>
+                    <hr class="w-50 mb-1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="product-container col-10 offset-1">
+                    <div class="row mt-1 mb-2"></div>
+                    <div class="row">
+                        {% for product in products %}
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                                <div class="card h-100 border-0">
+                                    {% if product.logo %}
+                                        <a href="{% url 'design_detail' product.id %}">
+                                            <img class="card-img-top img-fluid" src="{{ product.logo }}" alt="{{ product.name }}">
+                                        </a>
+                                    {% else %}
+                                        <a href="{% url 'design_detail' product.id %}">
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
+                                        </a>
+                                    {% endif %}
+                                    <div class="card-body pb-0">
+                                        <p class="mb-0">{{ product.name }}</p>
+                                    </div>
+                                    <div class="card-footer bg-white pt-0 border-0 text-left">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                                {% if product.category %}
+                                                <p class="small mt-1 mb-0">
+                                                    <a class="text-muted" href="{% url 'design' %}?category={{ product.category.name }}">
+                                                        <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                                    </a>
+                                                </p>
+                                                {% endif %}
+                                                {% if product.quantity %}
+                                                    <small class="text-muted"><i class="fab fa-quora"></i>: {{ product.quantity }}</small>
+                                                {% else %}
+                                                    <small class="text-muted">No Quantity</small>
+                                                {% endif %}
+                                                {% if product.thicknes %}
+                                                <p class="small mt-1 mb-0">
+                                                    <a class="text-muted" href="{% url 'design' %}?thicknes={{ product.thicknes.name }}">
+                                                        <i class="fas fa-tag mr-1"></i>{{ product.thicknes.name }}
+                                                    </a>
+                                                </p>
+                                                {% endif %}
+                                                {% if product.edge %}
+                                                <p class="small mt-1 mb-0">
+                                                    <a class="text-muted" href="{% url 'design' %}?edge={{ product.edge.name }}">
+                                                        <i class="fas fa-tag mr-1"></i>{{ product.edge.friendly_name }}
+                                                    </a>
+                                                </p>
+                                                {% endif %}
+                                                {% if product.cardtype %}
+                                                <p class="small mt-1 mb-0">
+                                                    <a class="text-muted" href="{% url 'design' %}?cardtype={{ product.cardtype.name }}">
+                                                        <i class="fas fa-tag mr-1"></i>{{ product.cardtype.friendly_name }}
+                                                    </a>
+                                                </p>
+                                                {% endif %}
+                                                {% if product.paper %}
+                                                <p class="small mt-1 mb-0">
+                                                    <a class="text-muted" href="{% url 'design' %}?paper={{ product.paper.name }}">
+                                                        <i class="fas fa-tag mr-1"></i>{{ product.paper.friendly_name }}
+                                                    </a>
+                                                </p>
+                                                {% endif %}
+                                                {% if product.make %}
+                                                <p class="small mt-1 mb-0">
+                                                    <a class="text-muted" href="{% url 'design' %}?make={{ product.make.name }}">
+                                                        <i class="fas fa-tag mr-1"></i>{{ product.make.friendly_name }}
+                                                    </a>
+                                                </p>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% if forloop.counter|divisibleby:1 %}
+                                <div class="col-12 d-sm-none mb-5">
+                                    <hr>
+                                </div>
+                            {% endif %}
+
+                            {% if forloop.counter|divisibleby:2 %}
+                                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                    <hr>
+                                </div>
+                            {% endif %}
+
+                            {% if forloop.counter|divisibleby:3 %}
+                                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                    <hr>
+                                </div>
+                            {% endif %}
+
+                            {% if forloop.counter|divisibleby:4 %}
+                                <div class="col-12 d-none d-xl-block mb-5">
+                                    <hr>
+                                </div>
+                            {% endif %}
+
+                        {% endfor%}
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 {% endblock %}
