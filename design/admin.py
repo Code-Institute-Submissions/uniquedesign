@@ -78,6 +78,7 @@ class PapertypeAdmin(admin.ModelAdmin):
 class QuantityAdmin(admin.ModelAdmin):
     list_display = (
         'name',
+        'price'
     )
 
 

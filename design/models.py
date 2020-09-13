@@ -95,6 +95,7 @@ class Quantity(models.Model):
         verbose_name_plural = 'Quantity'
 
     name = models.CharField(max_length=254)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
 
     def __str__(self):
         return self.name
@@ -122,10 +123,10 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2, default='200')
     quantity = models.ForeignKey('Quantity', null=True, blank=True, on_delete=models.SET_NULL)
     edge = models.ForeignKey('Edge', null=True, blank=True, on_delete=models.SET_NULL)
-    cardtype = models.ForeignKey('CardType', null=True, blank=True, on_delete=models.SET_NULL)
+    cardtype = models.ForeignKey('Cardtype', null=True, blank=True, on_delete=models.SET_NULL)
     thicknes = models.ForeignKey('Thicknes', null=True, blank=True, on_delete=models.SET_NULL)
-    paper = models.ForeignKey('PaperType', null=True, blank=True, on_delete=models.SET_NULL)
-    make = models.ForeignKey('PaperMake', null=True, blank=True, on_delete=models.SET_NULL)
+    paper = models.ForeignKey('Papertype', null=True, blank=True, on_delete=models.SET_NULL)
+    make = models.ForeignKey('Papermake', null=True, blank=True, on_delete=models.SET_NULL)
     header = models.ForeignKey('Header', null=True, blank=True, on_delete=models.SET_NULL)
     footer = models.BooleanField(default=False, null=True, blank=True)
     has_sizes = models.BooleanField(default=False, null=True, blank=True)

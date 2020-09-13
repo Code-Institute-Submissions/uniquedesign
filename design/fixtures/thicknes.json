@@ -3,7 +3,7 @@
         "pk": 1,
         "model": "design.thicknes",
         "fields": {
-            "name": "250gsm (for Business Card)",
+            "name": "250gsm",
             "price": 0.00
         }
     },
@@ -11,7 +11,7 @@
         "pk": 2,
         "model": "design.thicknes",
         "fields": {
-            "name": "300gsm (for Business Card)",
+            "name": "300gsm",
             "price": 1.99
         }
     },
@@ -19,7 +19,7 @@
         "pk": 3,
         "model": "design.thicknes",
         "fields": {
-            "name": "350gsm (for Business Card)",
+            "name": "350gsm",
             "price": 2.99
         }
     },
@@ -27,7 +27,7 @@
         "pk": 4,
         "model": "design.thicknes",
         "fields": {
-            "name": "400gsm (for Business Card)",
+            "name": "400gsm",
             "price": 3.99
         }
     },
@@ -35,7 +35,7 @@
         "pk": 5,
         "model": "design.thicknes",
         "fields": {
-            "name": "100gsm (for Letter Head)",
+            "name": "100gsm",
             "price": 0.00
         }
     },
@@ -43,7 +43,7 @@
         "pk": 6,
         "model": "design.thicknes",
         "fields": {
-            "name": "120gsm (for Letter Head)",
+            "name": "120gsm",
             "price": 1.99
         }
     },
@@ -51,7 +51,7 @@
         "pk": 7,
         "model": "design.thicknes",
         "fields": {
-            "name": "130gsm (for Letter Head)",
+            "name": "130gsm",
             "price": 2.99
         }
     },
@@ -59,7 +59,7 @@
         "pk": 8,
         "model": "design.thicknes",
         "fields": {
-            "name": "160gsm (for Letter Head)",
+            "name": "160gsm",
             "price": 3.99
         }
     }

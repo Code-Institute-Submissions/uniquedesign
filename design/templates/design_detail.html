@@ -15,7 +15,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                 <div class="image-container my-5">
+                 <div class="card image-container my-5">
                     {% if product.logo %}
                         <a href="{{ product.logo }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.logo }}" alt="{{ product.name }}">
@@ -29,9 +29,20 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-detail-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.name }}</p>
+                    {% if product.edge and product.cardtype %}
+                        <p class="mt-1 mb-0">
+                            <i class="fas fa-cheese"></i> : {{ product.edge.friendly_name }} ||| <i class="fas fa-address-card"></i> : {{ product.cardtype.friendly_name }}
+                        </p>
+                    {% endif %}
+                    {% if product.paper and product.make %}
+                        <p class="mt-1 mb-0">
+                            <i class="fas fa-file-powerpoint"></i> : {{ product.paper.friendly_name }} ||| <i class="fab fa-magento"></i> : {{ product.make.friendly_name }}
+                        </p>
+                    {% endif %}
+                    <hr>
                     <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-
+                    <hr>
+                    <p class="mb-0">{{ product.info }}</p>
                 </div>
             </div>
         </div>    

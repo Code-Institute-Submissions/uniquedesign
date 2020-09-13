@@ -3,63 +3,63 @@
         "pk": 1,
         "model": "design.quantity",
         "fields": {
-            "name": "100 (for Business Cards)"
+            "name": "100"
         }
     },
     {
         "pk": 2,
         "model": "design.quantity",
         "fields": {
-            "name": "200 (for Business Cards)"
+            "name": "200"
         }
     },
     {
         "pk": 3,
         "model": "design.quantity",
         "fields": {
-            "name": "300 (for Business Cards)"
+            "name": "300"
         }
     },
     {
         "pk": 4,
         "model": "design.quantity",
         "fields": {
-            "name": "400 (for Business Cards)"
+            "name": "400"
         }
     },
     {
         "pk": 5,
         "model": "design.quantity",
         "fields": {
-            "name": "500 (for Letter Head)"
+            "name": "500"
         }
     },
     {
         "pk": 6,
         "model": "design.quantity",
         "fields": {
-            "name": "1000 (for Letter Head)"
+            "name": "1000"
         }
     },
     {
         "pk": 7,
         "model": "design.quantity",
         "fields": {
-            "name": "1500 (for Letter Head)"
+            "name": "1500"
         }
     },
     {
         "pk": 8,
         "model": "design.quantity",
         "fields": {
-            "name": "2000 (for Letter Head)"
+            "name": "2000"
         }
     },
     {
         "pk": 9,
         "model": "design.quantity",
         "fields": {
-            "name": "2500 (for Letter Head)"
+            "name": "2500"
         }
     }
 ]

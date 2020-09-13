@@ -1,3 +1,21 @@
+.card-design {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    /* min-height: 1px; */
+    padding: 1.25rem;
+    position: relative;
+    /* display: -ms-flexbox;
+    display: flex; */
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
 .card-square {
     position: relative;
     display: -ms-flexbox;
@@ -9,7 +27,7 @@
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
-    /* border-radius: .25rem; */
+    /* border-radius: 3rem; */
 }
 
 .card-rounded {
@@ -24,6 +42,46 @@
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 3rem;
+}
+
+/* .card-business {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 350px;
+    max-height: 250px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+} */
+
+.card-round {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50%;
+    max-width: 80px;
+    max-height: 80px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-subtitle {
+    margin-top: -.375rem;
+    margin-bottom: 0;
+    font-family: 'Ubuntu';
+    font-size: 16px;
 }
 
 .selector-for-some-widget {
@@ -54,6 +112,10 @@
 .container_index {
     text-align: center;
     padding-top: 164px;
+}
+
+.small-font {
+    font-size: 14px;
 }
 
 .logo-font {
@@ -91,6 +153,10 @@
 .divider {
     border: 2px solid #06131b;
     margin: 0;
+}
+
+.img {
+    flex: 1.5;
 }
 
 .head-divider {

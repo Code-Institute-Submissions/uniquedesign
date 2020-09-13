@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
+    <div class="container">
         <div class="row">
             <div class="w-100">
                 <div class="bracket-font text-center">
@@ -32,9 +32,9 @@
                 <div class="card">
                     <h5 class="card-header">Plain</h5>
                     <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                         <li>300gsm paper stock</li>
                         <li>Best for High-Volume events</li>
+                        <div class="card-subtitle mt-2">200 from £30</div>
                     </div>
                     <div class="card-footer">
                         <a href="{% url 'design' %}" class="card-link">Explore...</a>
@@ -45,9 +45,9 @@
                 <div class="card textured-background">
                     <h5 class="card-header">Textured</h5>
                     <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                         <li>Lightly speckled for a canvas-like effect.</li>
                         <li><b>Feels like:</b> Lightly rippled</li>
+                        <div class="card-subtitle mt-2">200 from £40</div>
                     </div>
                     <div class="card-footer">
                         <a href="{% url 'design' %}" class="card-link">Explore...</a>
@@ -58,9 +58,9 @@
                 <div class="card uv-background uv-font">
                     <h5 class="card-header">UV</h5>
                     <div class="card-body">
-                        <h6 class="card-subtitle mb-2">Card subtitle</h6>
                         <li>Added raised text to your card</li>
                         <li>Makes text and visuals pop</li>
+                        <div class="card-subtitle mt-2">200 from £50</div>
                     </div>
                     <div class="card-footer uv-link">
                         <a href="{% url 'design' %}" class="card-link">Explore...</a>
@@ -81,11 +81,11 @@
                 <div class="card-square">
                     <h5 class="card-header">Square</h5>
                     <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                         <li>Measure 65 x 65 mm</li>
                         <li>A unique look, great for featuring logos or photos</li>
                         <li>Work as product tags, coupons, instructions and more</li>
                         <li>Eco-friendly, FSC-certified paper </li>
+                        <div class="card-subtitle mt-2">200 from £30</div>
                     </div>
                     <div class="card-footer">
                         <a href="{% url 'design' %}" class="card-link">Explore...</a>
@@ -96,11 +96,11 @@
                 <div class="card-rounded">
                     <h5 class="card-header">Rounded</h5>
                     <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                         <li>Standard size (85 x 55 mm)</li>
                         <li>6 mm rounded corners</li>
                         <li>Available in a variety of stocks and weights</li>
                         <li>Fit perfectly in any standard holder or wallet</li>
+                        <div class="card-subtitle mt-2">200 from £40</div>
                     </div>
                     <div class="card-footer">
                         <a href="{% url 'design' %}" class="card-link">Explore...</a>
@@ -122,11 +122,11 @@
                 <div class="card">
                     <h5 class="card-header">Image - Basic</h5>
                     <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                         <li>Image Business Light is an ideal multifunctional light-weight office paper</li>
                         <li>sustainable environmental credentials suitable for everyday printing and copying of business documents</li>
                         <li>Steadfast and reliable for mono-colour printing</li>
-                        <li>Image Business Light is FSC certified and awarded European Eco label.</li>
+                        <li>Image Business Light is FSC certified and awarded European Eco label</li>
+                        <div class="card-subtitle mt-2">500 from £20</div>
                     </div>
                     <div class="card-footer">
                         <a href="{% url 'design' %}" class="card-link">Explore...</a>
@@ -137,11 +137,11 @@
                 <div class="card">
                     <h5 class="card-header">Xerox - Standard</h5>
                     <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                         <li>Xerox Business is a high performance paper suitable for everyday laser, inkjet and offset applications.</li>
                         <li>This paper delivers reliable and consistent performance page after page</li>
                         <li>Quickpack cartons are also available to help high volume users save time and money</li>
                         <li> Quickpack cartons contain 2500 sheets without ream wrappers allowing quick loading of high volume printers and copiers</li>
+                        <div class="card-subtitle mt-2">500 from £30</div>
                     </div>
                     <div class="card-footer">
                         <a href="{% url 'design' %}" class="card-link">Explore...</a>
@@ -152,11 +152,11 @@
                 <div class="card">
                     <h5 class="card-header">HP - Premium</h5>
                     <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                         <li>Designed for superior performance with inkjet and laser printers</li>
                         <li>Ideal for presentations, offers and other business documents that require colour and a professional look</li>
                         <li>HP Premium features Colorlok technology for brighter colours, bolder blacks and faster drying</li>
                         <li>Tear Strip for convenient opening</li>
+                        <div class="card-subtitle mt-2">500 from £40</div>
                     </div>
                     <div class="card-footer">
                         <a href="{% url 'design' %}" class="card-link">Explore...</a>
@@ -167,11 +167,11 @@
                 <div class="card">
                     <h5 class="card-header">Conqueror</h5>
                     <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                         <li>Eye-catching paper ensures your communications stand out</li>
                         <li>For a crisp and contemporary feel to your communications, Conqueror Wove provides a range of warm, rich papers and envelopes, sleek to the touch with superb performance</li>
                         <li>Unwatermarked for greater flexibility</li>
                         <li>All sheets are guaranteed for use on desktop inkjet and laser printers, but can also be used for handwriting</li>
+                        <div class="card-subtitle mt-2">500 from £50</div>
                     </div>
                     <div class="card-footer">
                         <a href="{% url 'design' %}" class="card-link">Explore...</a>
@@ -179,7 +179,6 @@
                 </div>
             </div>
         </div>
-        
     </div>
-    <div class="mb-5"></div>
+    <hr class="mb-2">
 {% endblock %}
