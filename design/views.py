@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
+from .models import Product, Category, Quantity, Thicknes
 
 # Create your views here.
 
@@ -10,6 +10,8 @@ from .models import Product, Category
 def design(request):
 
     products = Product.objects.all()
+    quantity = Quantity.objects.all()
+    thickness = Thicknes.objects.all()
 
     query = None
     categories = None
@@ -50,6 +52,7 @@ def design(request):
 
     context = {
         'products': products,
+        'quantity': quantity,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -61,9 +64,15 @@ def design(request):
 def design_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
+    products = Product.objects.all()
+    quantities = Quantity.objects.all()
+    thickness = Thicknes.objects.all()
 
     context = {
         'product': product,
+        'products': products,
+        'quantities': quantities,
+        'thickness': thickness,
     }
 
     return render(request, 'design_detail.html', context)

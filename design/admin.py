@@ -78,6 +78,7 @@ class PapertypeAdmin(admin.ModelAdmin):
 class QuantityAdmin(admin.ModelAdmin):
     list_display = (
         'name',
+        'friendly_name',
         'price'
     )
 
@@ -85,6 +86,7 @@ class QuantityAdmin(admin.ModelAdmin):
 class ThicknesAdmin(admin.ModelAdmin):
     list_display = (
         'name',
+        'friendly_name',
         'price'
     )
 

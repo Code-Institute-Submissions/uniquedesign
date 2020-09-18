@@ -29,7 +29,7 @@
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
-                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                                 <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -72,7 +72,7 @@
                                         </div>
                                             <p class="lead mb-0 font-weight-bold">£{{ product.price }} 
                                                 {% if product.quantity %}
-                                                    <small class="text-muted">(for {{ product.quantity }})</small>
+                                                    <small class="text-muted">(for {{ product.quantity.friendly_name }})</small>
                                                 {% else %}
                                                     <small class="text-muted">No Quantity</small>
                                                 {% endif %}
