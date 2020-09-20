@@ -11,7 +11,6 @@ def design(request):
 
     products = Product.objects.all()
     quantity = Quantity.objects.all()
-    thickness = Thicknes.objects.all()
 
     query = None
     categories = None
@@ -64,6 +63,8 @@ def design(request):
 def design_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
+    quantity = get_object_or_404(Quantity, pk=product_id)
+    thicknes = get_object_or_404(Thicknes, pk=product_id)
     products = Product.objects.all()
     quantities = Quantity.objects.all()
     thickness = Thicknes.objects.all()
@@ -71,8 +72,10 @@ def design_detail(request, product_id):
     context = {
         'product': product,
         'products': products,
+        'quantity': quantity,
         'quantities': quantities,
         'thickness': thickness,
+        'thicknes': thicknes,
     }
 
     return render(request, 'design_detail.html', context)

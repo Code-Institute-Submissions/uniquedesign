@@ -95,12 +95,16 @@ class Quantity(models.Model):
         verbose_name_plural = 'Quantity'
 
     name = models.CharField(max_length=254)
+    category = models.CharField(max_length=254)
     friendly_name = models.DecimalField(max_digits=6, decimal_places=0)
     price = models.DecimalField(max_digits=6, decimal_places=0)
 
     def __str__(self):
         return self.name
-    
+
+    def get_category(self):
+        return self.category
+
     def get_friendly_name(self):
         return self.friendly_name
 
@@ -110,11 +114,15 @@ class Quantity(models.Model):
 
 class Thicknes(models.Model):
     name = models.CharField(max_length=254)
+    category = models.CharField(max_length=254)
     friendly_name = models.DecimalField(max_digits=6, decimal_places=0)
     price = models.DecimalField(max_digits=6, decimal_places=0)
 
     def __str__(self):
         return self.name
+
+    def get_category(self):
+        return self.category
 
     def get_friendly_name(self):
         return self.friendly_name
@@ -131,7 +139,7 @@ class Product(models.Model):
     address = models.CharField(max_length=254, default='Company Address')
     tel = models.DecimalField(max_digits=8, decimal_places=0, default='1234')
     email = models.EmailField(max_length=254, default='eMail Address')
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=0)
     quantity = models.ForeignKey('Quantity', null=True, blank=True, on_delete=models.SET_NULL)
     edge = models.ForeignKey('Edge', null=True, blank=True, on_delete=models.SET_NULL)
     cardtype = models.ForeignKey('Cardtype', null=True, blank=True, on_delete=models.SET_NULL)

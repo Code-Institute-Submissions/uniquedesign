@@ -33,8 +33,8 @@
                                     <th scope="col">Product Info</th>
                                     <th scope="col"></th>
                                     <th scope="col">Price</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Subtotal</th>
+                                    <th scope="col">Add-on(s)</th>
+                                    <th scope="col">Product Total</th>
                                 </tr>
                             </thead>
                             {% for item in items %}
@@ -45,19 +45,20 @@
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                        <p class="my-0 small text-muted">{{ item.product.category.friendly_name }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">£{{ item.product.price }}</p>
+                                        <p class="my-0">£{{ item.product.price }}.00</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">{{ item.product.quantity }}</p>
+                                        <p class="my-0">£{{ item.pro_total }}.00</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">£{{ item.product.price }}</p>
+                                        <p class="my-0">£{{ item.quantity }}.00</p>
                                     </td>
                                 </tr>
-                                <a href=""> Edit </a>
                             {% endfor %}
+                            
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
                                     <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
@@ -88,6 +89,7 @@
                             </tr>
                         </table>
                     </div>
+                    <hr>
                 {% else %}
                     <p class="lead mb-5"> Purchase something.</p>
                     <a href="{% url 'design' %}" class="btn btn-outline-black rounded-1 mt-5">
