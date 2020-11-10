@@ -3,63 +3,81 @@
         "pk": 1,
         "model": "design.quantity",
         "fields": {
-            "name": "100"
+            "name": "100",
+            "friendly_name": "100",
+            "price": 0
         }
     },
     {
         "pk": 2,
         "model": "design.quantity",
         "fields": {
-            "name": "200"
+            "name": "200",
+            "friendly_name": "200",
+            "price": 3
         }
     },
     {
         "pk": 3,
         "model": "design.quantity",
         "fields": {
-            "name": "300"
+            "name": "300",
+            "friendly_name": "300",
+            "price": 6
         }
     },
     {
         "pk": 4,
         "model": "design.quantity",
         "fields": {
-            "name": "400"
+            "name": "400",
+            "friendly_name": "400",
+            "price": 9
         }
     },
     {
         "pk": 5,
         "model": "design.quantity",
         "fields": {
-            "name": "500"
+            "name": "500",
+            "friendly_name": "500",
+            "price": 0
         }
     },
     {
         "pk": 6,
         "model": "design.quantity",
         "fields": {
-            "name": "1000"
+            "name": "1000",
+            "friendly_name": "1000",
+            "price": 2
         }
     },
     {
         "pk": 7,
         "model": "design.quantity",
         "fields": {
-            "name": "1500"
+            "name": "1500",
+            "friendly_name": "1500",
+            "price": 4
         }
     },
     {
         "pk": 8,
         "model": "design.quantity",
         "fields": {
-            "name": "2000"
+            "name": "2000",
+            "friendly_name": "2000",
+            "price": 6
         }
     },
     {
         "pk": 9,
         "model": "design.quantity",
         "fields": {
-            "name": "2500"
+            "name": "2500",
+            "friendly_name": "2500",
+            "price": 8
         }
     }
 ]
