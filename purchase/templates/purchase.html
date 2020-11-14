@@ -52,7 +52,7 @@
                                     </td>
                                     <td class="py-3 text-center">
                                         <p class="my-0">£{{ item.pro_total }}.00</p>
-                                        <a href="" class="btn-sm btn-black rounded-0"><small>Edit</small></a>|
+                                        <a href="{% url 'edit_purchase' item.item_id %}" class="btn-sm btn-black rounded-0"><small>Edit</small></a>|
                                         <a href="{% url 'remove_purchase' item.item_id %}" id="remove_{{item.item_id}}" class="btn-sm btn-black rounded-0"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3 text-center">

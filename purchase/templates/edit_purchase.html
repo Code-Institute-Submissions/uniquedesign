@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block page-header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                 <div class="card image-container my-5">
+                    {% if product.logo %}
+                        <a href="{{ product.logo }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ product.logo }}" alt="{{ product.name }}">
+                        </a>
+                    {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
+                        </a>
+                    {% endif %}
+                 </div>   
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="product-detail-container mb-5 mt-md-5">
+                    {% if product.edge and product.cardtype %}
+                        <p class="mt-1 mb-0">
+                            <i class="fas fa-cheese"></i> : {{ product.edge.friendly_name }} ||| <i class="fas fa-address-card"></i> : {{ product.cardtype.friendly_name }}
+                        </p>
+                    {% endif %}
+                    {% if product.paper and product.make %}
+                        <p class="mt-1 mb-0">
+                            <i class="fas fa-file-powerpoint"></i> : {{ product.paper.friendly_name }} ||| <i class="fab fa-magento"></i> : {{ product.make.friendly_name }}
+                        </p>
+                    {% endif %}
+                    <hr>
+                    <p class="mb-0">{{ product.info }}</p>
+                    <hr>
+                    <form class="form" action="{% url 'add_purchase' product.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <p class="mt-3"><strong>Price:</strong></p>
+                                <div class="form-group w-50">
+                                <select class="custom-select custom-select-sm rounded-1 border font-weight-bold" name="proprice">
+                                    <option value="{{ product.price }}" type="hidden" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}"> £{{ product.price }}.00</option>
+                                </select>   
+                                </div>
+                                <p class="mt-3"><strong>Quantity:</strong></p>
+                                <div class="form-group w-50">
+                                    <select class="custom-select custom-select-sm rounded-1 border" name="quantity_price">
+                                        {% for quantity in quantities %}
+                                            <option value="{{ quantity.price }}" min="100" max="400" type="number" data-item_id="{{ product.id }}" id="id_qty_{{ quantity.id }}"> 
+                                                <strong>{{ quantity.friendly_name }}</strong> @ £{{ quantity.price}}.00 for {{ quantity.category }}
+                                            </option>
+                                        {% endfor %}
+                                    </select>
+                                    <p> LH = Letter Head<br> BC = Business Card </p>
+                                </div>
+                                <p class="mt-3"><strong>Thickness (in gsm):</strong></p>
+                                <div class="form-group w-50">
+                                    <select class="custom-select custom-select-sm rounded-1 border" name="thickness_price">
+                                        {% for thick in thickness %}
+                                            <option value="{{ thick.price }}" min="100" max="400" type="number" data-item_id="{{ product.id }}" id="id_qty_{{ thick.id }}">
+                                                <strong>{{ thick.friendly_name }}</strong> @ £{{ thick.price }}.00 for {{ thick.category }}
+                                            </option>
+                                        {% endfor %}
+                                    </select>
+                                    <p> LH = Letter Head<br> BC = Business Card </p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <a href="{% url 'design' %}" class="btn btn-outline-black rounded-1 mt-5">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <input type="submit" class="btn btn-black rounded-1 text-uppercase mt-5" value="Add to Bag">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>    
+    </div>
+{% endblock %}
