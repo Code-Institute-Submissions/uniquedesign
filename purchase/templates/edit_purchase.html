@@ -13,9 +13,12 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid">
+        <div class="col bg-blue text-white text-center">
+        <h4 class="text-center my-1">Please select QUANTITY and THICKNESS again</h4>
+        </div>
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                 <div class="card image-container my-5">
+                <div class="card image-container my-5">
                     {% if product.logo %}
                         <a href="{{ product.logo }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.logo }}" alt="{{ product.name }}">
