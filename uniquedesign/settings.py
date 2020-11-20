@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'design',
     'home',
     'purchase',
+    'payment',
 ]
 
 MIDDLEWARE = [
