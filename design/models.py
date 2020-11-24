@@ -148,7 +148,6 @@ class Product(models.Model):
     make = models.ForeignKey('Papermake', null=True, blank=True, on_delete=models.SET_NULL)
     header = models.ForeignKey('Header', null=True, blank=True, on_delete=models.SET_NULL)
     footer = models.BooleanField(default=False, null=True, blank=True)
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     logo = models.ImageField(upload_to = 'media/', default = 'media/noimage.jpg', null=True, blank=True)
