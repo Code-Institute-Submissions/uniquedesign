@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderItem
-from design.models import Product, Category
+from design.models import Product
 from purchase.contexts import purchase_items
 import stripe
 
@@ -99,7 +99,7 @@ def payment(request):
 
 def payment_success(request, order_number):
     """
-    Handle successful checkouts
+    Handle successful payment
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
@@ -116,4 +116,3 @@ def payment_success(request, order_number):
     }
 
     return render(request, template, context)
-    
