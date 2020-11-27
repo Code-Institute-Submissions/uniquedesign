@@ -495,3 +495,15 @@ input[name='q']::placeholder {
     color: #000;
     border: 1px solid #000;
 }
+
+/*---------------------------------Payment Country Field-*/
+
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
