@@ -1,11 +1,30 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
+from django.views.decorators.http import require_POST
 from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderItem
 from design.models import Product
 from purchase.contexts import purchase_items
 import stripe
+import json
+
+
+@require_POST
+def cache_payment_data(request):
+    try:
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.PaymentIntent.modify(pid, metadata={
+            'purchase': json.dumps(request.session.get('purchase', {})),
+            'save_info': request.POST.get('save_info'),
+            'username': request.user,
+        })
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, 'Sorry, your payment cannot be \
+            processed right now. Please try again later.')
+        return HttpResponse(content=e, status=400)
 
 
 def payment(request):
@@ -19,17 +38,21 @@ def payment(request):
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
-            'phone_number': request.POST['phone_number'],
-            'country': request.POST['country'],
-            'postcode': request.POST['postcode'],
-            'town_or_city': request.POST['town_or_city'],
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
+            'town_or_city': request.POST['town_or_city'],
             'county': request.POST['county'],
+            'postcode': request.POST['postcode'],
+            'country': request.POST['country'],
+            'phone_number': request.POST['phone_number'],
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_purchase = json.dumps(purchase)
+            order.save()
             for item_id, item_data in purchase.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -78,8 +101,6 @@ def payment(request):
         currency=settings.STRIPE_CURRENCY,
     )
 
-    print(intent)
-
     order_form = OrderForm()
 
     if not stripe_public_key:
@@ -91,7 +112,6 @@ def payment(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
-        'total': total,
     }
 
     return render(request, template, context)
