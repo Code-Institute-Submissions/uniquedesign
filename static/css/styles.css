@@ -531,3 +531,8 @@ select option[value=""] {
     max-height: 416px; /* height of profile form + submit button */
     overflow-y: auto;
 }
+
+.order-history-center {
+    margin: auto;
+    width: 60%;
+}

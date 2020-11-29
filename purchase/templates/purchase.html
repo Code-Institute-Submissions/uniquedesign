@@ -40,7 +40,11 @@
                             {% for item in items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ item.product.logo }}">
+                                        {% if item.product.logo %}
+                                            <img class="img-fluid rounded" src="{{ item.product.logo }}"  alt="{{ item.product.name }}">
+                                        {% else %}
+                                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ item.product.name }}">
+                                        {% endif %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
@@ -59,7 +63,15 @@
                                         <p class="my-0">£{{ item.quantity }}.00</p>
                                     </td>
                                 </tr>
-                            {% endfor %}                            
+                                <tr>
+                                    <td class="py-3 text-center">
+                                        <p class="my-0">{{ item.p_name }}</p>
+                                    </td>
+                                    <td class="py-3 text-center">
+                                        <p class="my-0">{{ item.orgname }}</p>
+                                    </td>
+                                </tr>
+                            {% endfor %} 
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
                                     <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>

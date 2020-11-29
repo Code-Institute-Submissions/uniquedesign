@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category, Quantity, Thicknes
+from .forms import DesignForm
 
 # Create your views here.
 
@@ -71,5 +72,50 @@ def design_detail(request, product_id):
         'quantities': quantities,
         'thickness': thickness,
     }
-
+    
     return render(request, 'design_detail.html', context)
+
+
+def add_design(request):
+    """ Add a product to the store """
+    if request.method == 'POST':
+        form = DesignForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added design!')
+            return redirect(reverse('add_design'))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = DesignForm()
+
+    template = 'add_design.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def update_design(request, product_id):
+    """ Edit a product in the store """
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = DesignForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated product!')
+            return redirect(reverse('design_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        form = DesignForm(instance=product)
+        messages.info(request, f'You are editing {product.name}')
+
+    template = 'update_design.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)

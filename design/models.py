@@ -150,8 +150,8 @@ class Product(models.Model):
     footer = models.BooleanField(default=False, null=True, blank=True)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
-    logo = models.ImageField(upload_to = 'media/', default = 'media/noimage.jpg', null=True, blank=True)
-    info = models.CharField(max_length=254, default='Registration Information')
+    logo = models.ImageField(upload_to='media/', default='media/noimage.jpg', null=True, blank=True)
+    info = models.CharField(max_length=254, default='Description')
 
     def __str__(self):
         return self.name

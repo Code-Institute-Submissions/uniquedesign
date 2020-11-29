@@ -19,6 +19,8 @@ def add_purchase(request, item_id):
     proprice = int(request.POST.get('proprice'))
     redirect_url = request.POST.get('redirect_url')
     purchase = request.session.get('purchase', {})
+    p_name = request.POST.get('p_name')
+    orgname = request.POST.get('orgname')
 
     if item_id in list(purchase.keys()):
         purchase[item_id] = quantity_price + thickness_price + proprice
@@ -28,7 +30,8 @@ def add_purchase(request, item_id):
         messages.success(request, f'Added {product.name} to your Purchase list')
 
     request.session['purchase'] = purchase
-
+    print(f"Name: {p_name}")
+    print(f"Org_Name: {orgname}")
     return redirect(redirect_url)
 
 
