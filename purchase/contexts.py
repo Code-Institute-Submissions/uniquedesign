@@ -9,6 +9,11 @@ def purchase_items(request):
     items = []
     total = 0
     product_count = 0
+    p_name = request.POST.get('p_name')
+    orgname = request.POST.get('orgname')
+    address = request.POST.get('address')
+    email = request.POST.get('email')
+    cnumber = request.POST.get('cnumber')
 
     purchase = request.session.get('purchase', {})
 
@@ -45,6 +50,11 @@ def purchase_items(request):
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
+        'p_name': p_name,
+        'orgname': orgname,
+        'address': address,
+        'email': email,
+        'cnumber': cnumber,
     }
 
     return context

@@ -55,7 +55,7 @@
                                 <div class="card">
                                     {% if product.logo %}
                                         <a href="{% url 'design_detail' product.id %}">
-                                            <img class="card-img-top img-fluid" src="{{ product.logo }}" alt="{{ product.name }}">
+                                            <img class="card-img-top img-fluid" src="{{ product.logo.url }}" alt="{{ product.name }}">
                                         </a>
                                     {% else %}
                                         <a href="{% url 'design_detail' product.id %}">
@@ -77,22 +77,22 @@
                                                     <small class="text-muted">No Quantity</small>
                                                 {% endif %}
                                             </p>
-                                            {% if product.edge %}
+                                            {% if product.edge and product.edge.name != "na" %}
                                                <p class="small mt-1 mb-0 text-muted">
                                                     <i class="fas fa-cheese"></i> : {{ product.edge.friendly_name }}
                                                 </p>
                                             {% endif %}
-                                            {% if product.cardtype %}
+                                            {% if product.cardtype and product.cardtype.name != "na"  %}
                                                <p class="small mt-1 mb-0 text-muted">
                                                     <i class="fas fa-address-card"></i> : {{ product.cardtype.friendly_name }}
                                                </p>
                                             {% endif %}
-                                            {% if product.paper %}
+                                            {% if product.paper and product.paper.name != "na"  %}
                                                 <p class="small mt-1 mb-0 text-muted">
                                                     <i class="fas fa-file-powerpoint"></i> : {{ product.paper.friendly_name }}
                                                 </p>
                                             {% endif %}
-                                            {% if product.make %}
+                                            {% if product.make and product.make.name != "na"  %}
                                                 <p class="small mt-1 mb-0 text-muted">
                                                     <i class="fab fa-magento"></i> : {{ product.make.friendly_name }}
                                                 </p>

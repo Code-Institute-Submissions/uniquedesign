@@ -164,7 +164,7 @@
 }
 
 .textured-background {
-    background: url('/media/textured.jpg');
+    background: url('/media/media/textured.jpg');
 }
 
 .uv-background {
@@ -184,7 +184,7 @@ html {
 }
 
 body {
-    background: url('/media/blue_background.jpg') no-repeat center center fixed;
+    background: url('/media/media/blue_background.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     /* color: rgb(218, 115, 18); */

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import django_heroku
+import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -27,7 +28,7 @@ SECRET_KEY = 'eoqiku73(@xn@5oy2!dtpeewklv%%*_he7141@x=1%nh^b+-a7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['unique-design.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -127,6 +128,9 @@ DATABASES = {
     }
 }
 
+# DATABASE = {
+#     'default': dj_database_url.parse('postgres://xwcrwlnivfpzfs:064a62707df2fcde2e5d61e73bf6911c43cbcc980b2c407c4bde7edbcd7140b6@ec2-50-16-198-4.compute-1.amazonaws.com:5432/da24hnqp38hgm4')
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

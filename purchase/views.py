@@ -1,14 +1,21 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from design.models import Product, Quantity, Thicknes
+from purchase.contexts import purchase_items
 
 
 # Create your views here.
 
-
 def purchase(request):
 
-    return render(request, 'purchase.html')
+    current_purchase = purchase_items(request)
+    p_name = current_purchase["p_name"]
+
+    context = {
+        'p_name': p_name
+    }
+    return render(request, 'purchase.html', context)
 
 
 def add_purchase(request, item_id):
@@ -19,8 +26,6 @@ def add_purchase(request, item_id):
     proprice = int(request.POST.get('proprice'))
     redirect_url = request.POST.get('redirect_url')
     purchase = request.session.get('purchase', {})
-    p_name = request.POST.get('p_name')
-    orgname = request.POST.get('orgname')
 
     if item_id in list(purchase.keys()):
         purchase[item_id] = quantity_price + thickness_price + proprice
@@ -30,11 +35,11 @@ def add_purchase(request, item_id):
         messages.success(request, f'Added {product.name} to your Purchase list')
 
     request.session['purchase'] = purchase
-    print(f"Name: {p_name}")
-    print(f"Org_Name: {orgname}")
+
     return redirect(redirect_url)
 
 
+@login_required
 def edit_purchase(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)

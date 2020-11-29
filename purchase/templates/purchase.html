@@ -41,7 +41,7 @@
                                 <tr>
                                     <td class="p-3 w-25">
                                         {% if item.product.logo %}
-                                            <img class="img-fluid rounded" src="{{ item.product.logo }}"  alt="{{ item.product.name }}">
+                                            <img class="img-fluid rounded" src="{{ item.product.logo.url }}"  alt="{{ item.product.name }}">
                                         {% else %}
                                             <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ item.product.name }}">
                                         {% endif %}
@@ -65,10 +65,10 @@
                                 </tr>
                                 <tr>
                                     <td class="py-3 text-center">
-                                        <p class="my-0">{{ item.p_name }}</p>
+                                        <p class="my-0">{{ p_name }}</p>
                                     </td>
                                     <td class="py-3 text-center">
-                                        <p class="my-0">{{ item.orgname }}</p>
+                                        <p class="my-0">{{ orgname }}</p>
                                     </td>
                                 </tr>
                             {% endfor %} 

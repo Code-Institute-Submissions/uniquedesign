@@ -75,8 +75,8 @@ class Papermake(models.Model):
 
 
 class Papertype(models.Model):
-    name = models.CharField(max_length=254)
-    friendly_name = models.CharField(max_length=254)
+    name = models.CharField(max_length=254, default='na')
+    friendly_name = models.CharField(max_length=254, default='NA')
     price = models.DecimalField(max_digits=6, decimal_places=2)
 
     def __str__(self):
