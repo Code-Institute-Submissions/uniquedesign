@@ -97,6 +97,12 @@
                                                     <i class="fab fa-magento"></i> : {{ product.make.friendly_name }}
                                                 </p>
                                             {% endif %}
+                                            {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a href="{% url 'update_design' product.id %}">Update</a> | 
+                                                    <a class="text-danger" href="{% url 'delete_design' product.id %}">Delete</a>
+                                                </small>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
