@@ -1,1 +1,1 @@
-web: gunicorn uniquedesign.wsgi:application
+web: gunicorn unique-design.wsgi:application
