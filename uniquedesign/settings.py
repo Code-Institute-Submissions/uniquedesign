@@ -121,16 +121,17 @@ WSGI_APPLICATION = 'uniquedesign.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-# DATABASE = {
-#     'default': dj_database_url.parse('postgres://xwcrwlnivfpzfs:064a62707df2fcde2e5d61e73bf6911c43cbcc980b2c407c4bde7edbcd7140b6@ec2-50-16-198-4.compute-1.amazonaws.com:5432/da24hnqp38hgm4')
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
 # }
+
+
+DATABASES = {
+    'default': dj_database_url.parse('postgres://lozzgffrczivtu:1f0cb8805e95432dc2c24cf74e7c4a514a2c49574bb547044530a46e20e4f019@ec2-54-228-209-117.eu-west-1.compute.amazonaws.com:5432/dej8499t22f5ds')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
