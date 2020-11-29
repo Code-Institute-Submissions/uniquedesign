@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category, Quantity, Thicknes
@@ -72,12 +73,17 @@ def design_detail(request, product_id):
         'quantities': quantities,
         'thickness': thickness,
     }
-    
+
     return render(request, 'design_detail.html', context)
 
 
+@login_required
 def add_design(request):
     """ Add a product to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('index'))
+
     if request.method == 'POST':
         form = DesignForm(request.POST, request.FILES)
         if form.is_valid():
@@ -97,8 +103,13 @@ def add_design(request):
     return render(request, template, context)
 
 
+@login_required
 def update_design(request, product_id):
     """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('index'))
+
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = DesignForm(request.POST, request.FILES, instance=product)
@@ -121,8 +132,13 @@ def update_design(request, product_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_design(request, product_id):
     """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('index'))
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Design deleted!')
