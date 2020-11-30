@@ -10,7 +10,7 @@ class DesignForm(forms.ModelForm):
                   'cardtype', 'thicknes', 'paper',
                   'make', 'header', 'logo', 'image_url', 'info', 'price')
 
-
+    # To have friendly name value in combobox 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()

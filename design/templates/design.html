@@ -15,6 +15,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center">
+                <hr>
                 <h2 class="logo-font">
                     Available Designs
                 </h2>
@@ -28,6 +29,8 @@
                     
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        
+                        <!-- To display a sorting box on right hand side of page -->
                         <div class="sort-select-wrapper w-50">
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
@@ -38,6 +41,8 @@
                             </select>
                         </div>
                     </div>
+
+                    <!-- To display a home link with amount of product diaplaying on page -->
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
@@ -47,6 +52,8 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- To display product description with image -->
                 <div class="row">
                     {% for product in products %}
                         
@@ -109,6 +116,7 @@
                             </div>
                         </div>
 
+                        <!-- To display product and description according to page width -->
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
                                 <hr>

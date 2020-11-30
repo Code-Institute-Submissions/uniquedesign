@@ -3,7 +3,6 @@ from .models import Category, Cardtype, Edge, Header, Papermake, Papertype, Quan
 
 # Register your models here.
 
-
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'sku',

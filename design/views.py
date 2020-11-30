@@ -6,8 +6,6 @@ from django.db.models.functions import Lower
 from .models import Product, Category, Quantity, Thicknes
 from .forms import DesignForm
 
-# Create your views here.
-
 
 def design(request):
 
@@ -80,13 +78,15 @@ def design_detail(request, product_id):
 @login_required
 def add_design(request):
     """ Add a product to the store """
+
+    # To keep amendment authority to Superusers only
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('index'))
 
     if request.method == 'POST':
-        form = DesignForm(request.POST, request.FILES)
-        if form.is_valid():
+        form = DesignForm(request.POST, request.FILES) # to get all data entered into a form
+        if form.is_valid(): # Check weather form is valid or not
             form.save()
             messages.success(request, 'Successfully added design!')
             return redirect(reverse('add_design'))
