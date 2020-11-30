@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
 from design.models import Product, Quantity, Thicknes
 from purchase.contexts import purchase_items
 
@@ -39,7 +38,6 @@ def add_purchase(request, item_id):
     return redirect(redirect_url)
 
 
-@login_required
 def edit_purchase(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
