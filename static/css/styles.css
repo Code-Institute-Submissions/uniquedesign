@@ -126,7 +126,7 @@
 
 .delivery-font {
     font-family: 'Ubuntu';
-    color: aliceblue;
+    color: #06131b;
     text-transform: uppercase;
 }
 
@@ -134,19 +134,19 @@
     font-family: 'Poppins';
     font-weight: bold;
     font-size: 24px;
-    color: aliceblue;
+    color: #06131b;
 }
 
 .bracket-font {
     font-family: 'Ubuntu';
     font-size: 24px;
-    color: aliceblue;
+    color: #06131b;
 }
 
 .heading-font {
     font-family: 'Ubuntu';
     font-size: 24px;
-    color: aliceblue;
+    color: #06131b;
     padding-left: 15px;
 }
 
@@ -160,7 +160,7 @@
 }
 
 .head-divider {
-    border: 1px solid aliceblue;
+    border: 1px solid #06131b;
 }
 
 .textured-background {
@@ -184,7 +184,7 @@ html {
 }
 
 body {
-    background: url('/media/media/blue_background.jpg') no-repeat center center fixed;
+    /* background: url('/media/media/blue_background.jpg') no-repeat center center fixed; */
     background-size: cover;
     height: calc(100vh - 164px);
     /* color: rgb(218, 115, 18); */
