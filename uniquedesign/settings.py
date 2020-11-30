@@ -26,7 +26,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['uniquedesign.herokuapp.com', 'localhost']
 
@@ -121,22 +122,22 @@ WSGI_APPLICATION = 'uniquedesign.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
-    DATABASE = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+# if 'DATABASE_URL' in os.environ:
+#     DATABASE = {
+#         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         }
+#     }
 
 
-# DATABASES = {
-#     'default': dj_database_url.parse('postgres://lozzgffrczivtu:1f0cb8805e95432dc2c24cf74e7c4a514a2c49574bb547044530a46e20e4f019@ec2-54-228-209-117.eu-west-1.compute.amazonaws.com:5432/dej8499t22f5ds')
-# }
+DATABASES = {
+    'default': dj_database_url.parse('postgres://lozzgffrczivtu:1f0cb8805e95432dc2c24cf74e7c4a514a2c49574bb547044530a46e20e4f019@ec2-54-228-209-117.eu-west-1.compute.amazonaws.com:5432/dej8499t22f5ds')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -207,7 +208,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 FREE_DELIVERY_THRESHOLD = 30
 STANDARD_DELIVERY_PERCENTAGE = 5
 
-#Stripe
+# Stripe
 STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
