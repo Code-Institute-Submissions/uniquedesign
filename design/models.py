@@ -21,7 +21,7 @@ class Category(models.Model):
 class Cardtype(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=8, decimal_places=2)
 
     def __str__(self):
         return self.name
@@ -36,7 +36,7 @@ class Cardtype(models.Model):
 class Edge(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=8, decimal_places=2)
 
     def __str__(self):
         return self.name
@@ -62,7 +62,7 @@ class Header(models.Model):
 class Papermake(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=8, decimal_places=2)
 
     def __str__(self):
         return self.name
@@ -77,7 +77,7 @@ class Papermake(models.Model):
 class Papertype(models.Model):
     name = models.CharField(max_length=254, default='na')
     friendly_name = models.CharField(max_length=254, default='NA')
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=8, decimal_places=2)
 
     def __str__(self):
         return self.name
@@ -97,7 +97,7 @@ class Quantity(models.Model):
     name = models.CharField(max_length=254)
     category = models.CharField(max_length=254)
     friendly_name = models.DecimalField(max_digits=6, decimal_places=0)
-    price = models.DecimalField(max_digits=6, decimal_places=0)
+    price = models.DecimalField(max_digits=8, decimal_places=0)
 
     def __str__(self):
         return self.name
@@ -115,8 +115,8 @@ class Quantity(models.Model):
 class Thicknes(models.Model):
     name = models.CharField(max_length=254)
     category = models.CharField(max_length=254)
-    friendly_name = models.DecimalField(max_digits=6, decimal_places=0)
-    price = models.DecimalField(max_digits=6, decimal_places=0)
+    friendly_name = models.DecimalField(max_digits=8, decimal_places=0)
+    price = models.DecimalField(max_digits=8, decimal_places=0)
 
     def __str__(self):
         return self.name
@@ -137,9 +137,9 @@ class Product(models.Model):
     name = models.CharField(max_length=254, default='Name')
     company = models.CharField(max_length=254, default='Company Name')
     address = models.CharField(max_length=254, default='Company Address')
-    tel = models.DecimalField(max_digits=8, decimal_places=0, default='1234')
+    tel = models.DecimalField(max_digits=11, decimal_places=0, default='1234')
     email = models.EmailField(max_length=254, default='eMail Address')
-    price = models.DecimalField(max_digits=6, decimal_places=0)
+    price = models.DecimalField(max_digits=8, decimal_places=0)
     quantity = models.ForeignKey('Quantity', null=True, blank=True, on_delete=models.SET_NULL)
     edge = models.ForeignKey('Edge', null=True, blank=True, on_delete=models.SET_NULL)
     cardtype = models.ForeignKey('Cardtype', null=True, blank=True, on_delete=models.SET_NULL)
@@ -148,7 +148,7 @@ class Product(models.Model):
     make = models.ForeignKey('Papermake', null=True, blank=True, on_delete=models.SET_NULL)
     header = models.ForeignKey('Header', null=True, blank=True, on_delete=models.SET_NULL)
     footer = models.BooleanField(default=False, null=True, blank=True)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     logo = models.ImageField(upload_to='media/', default='media/noimage.jpg', null=True, blank=True)
     info = models.CharField(max_length=254, default='Description')
