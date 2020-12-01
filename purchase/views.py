@@ -19,12 +19,12 @@ def purchase(request):
 
 def add_purchase(request, item_id):
 
-    product = Product.objects.get(pk=item_id)
-    quantity_price = int(request.POST.get('quantity_price'))
-    thickness_price = int(request.POST.get('thickness_price'))
-    proprice = int(request.POST.get('proprice'))
+    product = Product.objects.get(pk=item_id) # save data to product variable from Product model
+    quantity_price = int(request.POST.get('quantity_price')) # save value to variable from quantity_price id field
+    thickness_price = int(request.POST.get('thickness_price')) # save value to variable from thicknes_price id field
+    proprice = int(request.POST.get('proprice')) # save value to variable from proprice id field
     redirect_url = request.POST.get('redirect_url')
-    purchase = request.session.get('purchase', {})
+    purchase = request.session.get('purchase', {}) # get purchase session and stored in to purchase variable
 
     if item_id in list(purchase.keys()):
         purchase[item_id] = quantity_price + thickness_price + proprice
@@ -39,7 +39,7 @@ def add_purchase(request, item_id):
 
 
 def edit_purchase(request, item_id):
-
+    """Edit purchase"""
     product = get_object_or_404(Product, pk=item_id)
     quantities = Quantity.objects.all()
     thickness = Thicknes.objects.all()
@@ -54,7 +54,7 @@ def edit_purchase(request, item_id):
 
 
 def remove_purchase(request, item_id):
-
+    """Remove purchase"""
     product = Product.objects.get(pk=item_id)
     purchase = request.session.get('purchase', {})
 
