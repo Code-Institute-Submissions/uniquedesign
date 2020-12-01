@@ -12,6 +12,7 @@
 
 {% block content %}
     <div class="col bg-blue text-white text-center">
+        <hr>
         <h4 class="delivery-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>                
     </div>
     <div class="overlay"></div>
@@ -61,14 +62,6 @@
                                     </td>
                                     <td class="py-3 text-center">
                                         <p class="my-0">£{{ item.quantity }}.00</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 text-center">
-                                        <p class="my-0">{{ p_name }}</p>
-                                    </td>
-                                    <td class="py-3 text-center">
-                                        <p class="my-0">{{ orgname }}</p>
                                     </td>
                                 </tr>
                             {% endfor %} 

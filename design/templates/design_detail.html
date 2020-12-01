@@ -32,6 +32,11 @@
                 <div class="product-detail-container mb-5 mt-md-5">
 
                     <!-- To show related categories with symbol and display Update and Delete button for super user -->
+                    {% if product.category %}
+                        <p class="mt-1 mb-0">
+                            <strong>::: {{ product.category.friendly_name }} :::</strong>
+                        </p>
+                    {% endif %}
                     {% if product.edge.name != 'na' and product.cardtype.name != 'na' %}
                         <p class="mt-1 mb-0">
                             <i class="fas fa-cheese"></i> : {{ product.edge.friendly_name }} ||| <i class="fas fa-address-card"></i> : {{ product.cardtype.friendly_name }}
@@ -63,7 +68,7 @@
                                 </div>
 
                                 <!-- To render a combo box for customer to choose Quantity -->
-                                <p class="mt-3"><strong>Quantity:</strong></p>
+                                <p class="mt-3"><strong>Quantity:</strong><span class="small">(Choose Accordingly)</span></p>
                                 <div class="form-group w-50">
                                     <select class="custom-select custom-select-sm rounded-1 border" name="quantity_price">
                                         {% for quantity in quantities %}
@@ -72,11 +77,11 @@
                                             </option>
                                         {% endfor %}
                                     </select>
-                                    <p> LH = Letter Head<br> BC = Business Card </p>
+                                    <p class="small"> LH = Letter Head<br> BC = Business Card </p>
                                 </div>
 
                                 <!-- To render a combo box for customer to choose paper Thickness -->
-                                <p class="mt-3"><strong>Thickness (in gsm):</strong></p>
+                                <p class="mt-3"><strong>Thickness (in gsm):</strong><span class="small">(Choose Accordingly)</span></p>
                                 <div class="form-group w-50">
                                     <select class="custom-select custom-select-sm rounded-1 border" name="thickness_price">
                                         {% for thick in thickness %}
@@ -85,7 +90,7 @@
                                             </option>
                                         {% endfor %}
                                     </select>
-                                    <p> LH = Letter Head<br> BC = Business Card </p>
+                                    <p class="small"> LH = Letter Head<br> BC = Business Card </p>
                                 </div>
                             </div>
                             <p>Please email us the <strong>DETAILS</strong> you like to have on your design</p>
