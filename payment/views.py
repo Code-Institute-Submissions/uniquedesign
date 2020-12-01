@@ -15,12 +15,12 @@ import json
 @require_POST
 def cache_payment_data(request):
     try:
-        pid = request.POST.get('client_secret').split('_secret')[0]
-        stripe.api_key = settings.STRIPE_SECRET_KEY
+        pid = request.POST.get('client_secret').split('_secret')[0] # request client secret key
+        stripe.api_key = settings.STRIPE_SECRET_KEY # storing stripe key to the variable
         stripe.PaymentIntent.modify(pid, metadata={
-            'purchase': json.dumps(request.session.get('purchase', {})),
-            'save_info': request.POST.get('save_info'),
-            'username': request.user,
+            'purchase': json.dumps(request.session.get('purchase', {})), # request session from purchase
+            'save_info': request.POST.get('save_info'), # save info for save_info variable
+            'username': request.user, # svae user in to username variable
         })
         return HttpResponse(status=200)
     except Exception as e:
@@ -30,13 +30,14 @@ def cache_payment_data(request):
 
 
 def payment(request):
-
+    # save keys to variable
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
         purchase = request.session.get('purchase', {})
 
+        # save field datat to variable
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -48,11 +49,11 @@ def payment(request):
             'country': request.POST['country'],
             'phone_number': request.POST['phone_number'],
         }
-        order_form = OrderForm(form_data)
+        order_form = OrderForm(form_data) # save from data to order_form variable
         if order_form.is_valid():
             order = order_form.save(commit=False)
-            pid = request.POST.get('client_secret').split('_secret')[0]
-            order.stripe_pid = pid
+            pid = request.POST.get('client_secret').split('_secret')[0] # save client secret key to pid
+            order.stripe_pid = pid # save pid to variable
             order.original_purchase = json.dumps(purchase)
             order.save()
             for item_id, item_data in purchase.items():

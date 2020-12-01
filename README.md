@@ -23,6 +23,11 @@ Unique Design (unique-design.herokuapp.com)
 10.	Gmail
 11.	Heroku
 
+## Wireframe
+
+Wireframe for this project can be accessed from github repository
+https://github.com/hidayatmansuri/uniquedesign/tree/master/Wireframe
+
 ## UX
 
 This project is simple and easy to navigate where there only handful options available in the main navigation page. Home page describe the service and product company provide. While, another option has all available design to explore and purchase, which leads to choosing option according to customer needs and purchasing as well. Site also have option of saving profile, order history as well as updating person information.
