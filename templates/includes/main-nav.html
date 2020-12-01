@@ -5,12 +5,6 @@
             <a class="logo-font font-weight-bold nav-link text-blue mr-5" href="{% url 'index' %}">
                 About
             </a>
-            <!-- <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="" class="dropdown-item">All Products</a>
-            </div> -->
         </li>
 
         <li class="nav-item dropdown">
@@ -23,6 +17,12 @@
                 <a href="{% url 'design' %}?category=lhead" class="dropdown-item">Letter Head</a>
                 <a href="{% url 'design' %}?category=bcard,lhead" class="dropdown-item">All Design</a>
             </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-blue mr-5" href="{% url 'contact' %}">
+                Contact Us
+            </a>
         </li>
     </ul>
 </div>
